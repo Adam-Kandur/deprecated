@@ -115,7 +115,7 @@
        (origin
          (method git-fetch)
          (uri (git-reference
-               (url "https://github.com/AdamKaScripter/deprecated")
+               (url "https://github.com/sys.arch.adam/deprecated")
                (commit commit)))
          (file-name (git-file-name name version))
          (sha256
