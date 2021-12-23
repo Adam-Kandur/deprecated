@@ -115,7 +115,7 @@
        (origin
          (method git-fetch)
          (uri (git-reference
-               (url "https://github.com/sys.arch.adam/deprecated")
+               (url "https://gitlab.com/sys.arch.adam/deprecated")
                (commit commit)))
          (file-name (git-file-name name version))
          (sha256
@@ -129,7 +129,7 @@
              ;; Elisp directory is not in root of the source.
              (lambda _
                (chdir "stuff"))))))
-      (home-page "https://github.com/AdamKaScripter/deprecated")
+      (home-page "https://gitlab.com/sys.arch.adam/deprecated")
       (synopsis "")
       (description
        "")
