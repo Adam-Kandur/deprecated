@@ -107,7 +107,7 @@
 
 (define-public emacs-stuff
   (let ((commit "3a5eff3b7f67c288934cfaba3b3ed452c31514ab")
-        (revision "3"))
+        (revision "4"))
     (package
       (name "emacs-stuff")
       (version (git-version "1.0.0" revision commit))
