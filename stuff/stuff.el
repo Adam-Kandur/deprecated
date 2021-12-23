@@ -43,10 +43,6 @@
   ;; needed for running emacs inside of emacs
   (scroll-bar-mode -1)
 
-  (editorconfig-mode 1)
-
-  (add-hook 'after-init-hook #'global-emojify-mode)
-
   (if (x-list-fonts "Terminus")
       (set-frame-font "Terminus 20" nil t))
 

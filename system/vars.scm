@@ -8,7 +8,7 @@
   '("wheel" "netdev" "audio" "video" "docker" "libvirt" "kvm"))
 
 (define %my-system-packages
-  `("emacs"
+  '("emacs"
     "emacs-exwm"
     "emacs-desktop-environment"
     "emacs-magit"
