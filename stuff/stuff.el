@@ -47,7 +47,7 @@
   (if (x-list-fonts "Terminus")
       (set-frame-font "Terminus 20" nil t))
 
-  (load-theme 'tsdh-light)
+  (load-theme 'vscode-dark-plus)
 
   (setq backup-directory-alist '(("." . "~/.emacs_saves"))))
 
