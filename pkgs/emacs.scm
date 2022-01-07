@@ -106,7 +106,7 @@
   #:use-module (ice-9 match))
 
 (define-public emacs-stuff
-  (let ((commit "3a5eff3b7f67c288934cfaba3b3ed452c31514ab")
+  (let ((commit "a1165ab91cf26350d95f63e01c6708c525981547")
         (revision "4"))
     (package
       (name "emacs-stuff")
