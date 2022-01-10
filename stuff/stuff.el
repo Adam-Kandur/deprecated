@@ -23,11 +23,17 @@
   (stuff-generate-configs))
 
 (defun stuff-emacs-options-to-apply ()
-  ;; for copyright
-  (setq user-full-name "Adam Kandur")
-  (setq user-mail-address "rndd@tuta.io")
-  (setq comment-style 'extra-line)
   
+  (setq
+   ;; for commits
+   user-full-name "Adam Kandur"
+   user-mail-address "rndd@tuta.io"
+
+   comment-style 'extra-line
+   dired-listing-switches "-alFh"
+   inhibit-startup-screen t
+   backup-directory-alist '(("." . "~/.emacs_saves")))
+
   (let ((guix-dir "~/p/guix"))
     (if (file-directory-p guix-dir)
         (progn
@@ -38,7 +44,6 @@
           (load-file (concat guix-dir
                              "/etc/copyright.el")))))
 
-  (setq inhibit-startup-screen t)
   (menu-bar-mode 0)
   (tool-bar-mode 0)
   ;; needed for running emacs inside of emacs
@@ -47,9 +52,7 @@
   (if (x-list-fonts "Terminus")
       (set-frame-font "Terminus 20" nil t))
 
-  (load-theme 'vscode-dark-plus)
-
-  (setq backup-directory-alist '(("." . "~/.emacs_saves"))))
+  (load-theme 'vscode-dark-plus))
 
 (defun stuff-generate-configs ()
   (stuff-generate-dot-emacs)
