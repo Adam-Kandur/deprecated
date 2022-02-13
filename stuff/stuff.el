@@ -3,7 +3,7 @@
 (defvar stuff-dot-channels-scm
   (let ((guix-url "https://git.savannah.gnu.org/git/guix.git")
         (nonguix-url "https://gitlab.com/nonguix/nonguix")
-        (mine-url "https://gitlab.com/sys.arch.adam/deprecated"))
+        (mine-url "https://github.com/keph1r/MyBots"))
     `(list
        (channel
         (name 'guix)
@@ -51,8 +51,8 @@
 
   (if (x-list-fonts "Terminus")
       (set-frame-font "Terminus 20" nil t))
-
-  (load-theme 'vscode-dark-plus))
+)
+  ;; (load-theme 'vscode-dark-plus))
 
 (defun stuff-generate-configs ()
   (stuff-generate-dot-emacs)
