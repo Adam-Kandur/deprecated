@@ -41,65 +41,66 @@
   #:export (%my-desktop-services))
 
 (define %my-desktop-services
-  (cons* (if (string-prefix? "x86_64" system)
-             (service gdm-service-type)
-             (service sddm-service-type))
+  ;; (cons* (if (string-prefix? "x86_64" system)
+  ;;            (service gdm-service-type)
+  ;;            (service sddm-service-type))
 
-         ;; Screen lockers are a pretty useful thing and these are small.
-         (screen-locker-service slock)
-         (screen-locker-service xlockmore "xlock")
+  ;;        ;; Screen lockers are a pretty useful thing and these are small.
+  ;;        (screen-locker-service slock)
+  ;;        (screen-locker-service xlockmore "xlock")
 
-         ;; Add udev rules for MTP devices so that non-root users can access
-         ;; them.
-         (simple-service 'mtp udev-service-type (list libmtp))
-         ;; Add udev rules for scanners.
-         (service sane-service-type)
-         ;; Add polkit rules, so that non-root users in the wheel group can
-         ;; perform administrative tasks (similar to "sudo").
-         polkit-wheel-service
+  ;;        ;; Add udev rules for MTP devices so that non-root users can access
+  ;;        ;; them.
+  ;;        (simple-service 'mtp udev-service-type (list libmtp))
+  ;;        ;; Add udev rules for scanners.
+  ;;        (service sane-service-type)
+  ;;        ;; Add polkit rules, so that non-root users in the wheel group can
+  ;;        ;; perform administrative tasks (similar to "sudo").
+  ;;        polkit-wheel-service
 
-         ;; Allow desktop users to also mount NTFS and NFS file systems
-         ;; without root.
-         (simple-service 'mount-setuid-helpers setuid-program-service-type
-                         (map (lambda (program)
-                                (setuid-program
-                                 (program program)))
-                              (list (file-append nfs-utils "/sbin/mount.nfs")
-                               (file-append ntfs-3g "/sbin/mount.ntfs-3g"))))
+  ;;        ;; Allow desktop users to also mount NTFS and NFS file systems
+  ;;        ;; without root.
+  ;;        (simple-service 'mount-setuid-helpers setuid-program-service-type
+  ;;                        (map (lambda (program)
+  ;;                               (setuid-program
+  ;;                                (program program)))
+  ;;                             (list (file-append nfs-utils "/sbin/mount.nfs")
+  ;;                              (file-append ntfs-3g "/sbin/mount.ntfs-3g"))))
 
-         ;; The global fontconfig cache directory can sometimes contain
-         ;; stale entries, possibly referencing fonts that have been GC'd,
-         ;; so mount it read-only.
-         fontconfig-file-system-service
+  ;;        ;; The global fontconfig cache directory can sometimes contain
+  ;;        ;; stale entries, possibly referencing fonts that have been GC'd,
+  ;;        ;; so mount it read-only.
+  ;;        fontconfig-file-system-service
 
-         ;; NetworkManager and its applet.
-         (service network-manager-service-type)
-         (service wpa-supplicant-service-type)    ;needed by NetworkManager
-         (simple-service 'network-manager-applet
-                         profile-service-type
-                         (list network-manager-applet))
-         (service modem-manager-service-type)
-         (service usb-modeswitch-service-type)
+  ;;        ;; NetworkManager and its applet.
+  ;;        (service network-manager-service-type)
+  ;;        (service wpa-supplicant-service-type)    ;needed by NetworkManager
+  ;;        (simple-service 'network-manager-applet
+  ;;                        profile-service-type
+  ;;                        (list network-manager-applet))
+  ;;        (service modem-manager-service-type)
+  ;;        (service usb-modeswitch-service-type)
 
-         ;; The D-Bus clique.
-         (service avahi-service-type)
-         (udisks-service)
-         (service upower-service-type)
-         (accountsservice-service)
-         (service cups-pk-helper-service-type)
-         (service colord-service-type)
-         (geoclue-service)
-         (service polkit-service-type)
-         (elogind-service)
-         (dbus-service)
+  ;;        ;; The D-Bus clique.
+  ;;        (service avahi-service-type)
+  ;;        (udisks-service)
+  ;;        (service upower-service-type)
+  ;;        (accountsservice-service)
+  ;;        (service cups-pk-helper-service-type)
+  ;;        (service colord-service-type)
+  ;;        (geoclue-service)
+  ;;        (service polkit-service-type)
+  ;;        (elogind-service)
+  ;;        (dbus-service)
 
-         (service ntp-service-type)
+  ;;        (service ntp-service-type)
 
-         x11-socket-directory-service
+  ;;        x11-socket-directory-service
 
-         (service pulseaudio-service-type)
-         (service alsa-service-type)
+  ;;        (service pulseaudio-service-type)
+  ;;        (service alsa-service-type)
 
-         %base-services))
+  ;;        %base-services))
+  "haha")
 
 
