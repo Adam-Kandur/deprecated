@@ -1,6 +1,5 @@
 (define-module (sys vars)
   #:use-module (gnu)
-  #:use-module (pkgs emacs)
   #:export (%my-main-user-groups
             %my-system-packages))
 
