@@ -1,4 +1,4 @@
-(define-module (pkgs emacs)
+(define-module (sys pkgs emacs)
   #:use-module ((guix licenses) #:prefix license:)
   #:use-module (guix packages)
   #:use-module (guix cvs-download)

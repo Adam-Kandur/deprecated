@@ -1,4 +1,4 @@
-(define-module (pkgs python)
+(define-module (sys pkgs python)
   #:use-module ((guix licenses) #:prefix license:)
   #:use-module (gnu packages)
   #:use-module (gnu packages algebra)

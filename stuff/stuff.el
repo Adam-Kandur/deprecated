@@ -51,8 +51,7 @@
 
   (if (x-list-fonts "Terminus")
       (set-frame-font "Terminus 20" nil t))
-)
-  ;; (load-theme 'vscode-dark-plus))
+  (load-theme 'vscode-dark-plus))
 
 (defun stuff-generate-configs ()
   (stuff-generate-dot-emacs)
@@ -76,6 +75,5 @@
 (defun stuff-suspend ()
   (interactive)
   (shell-command "loginctl suspend && xlock"))
-
 
 (global-set-key (kbd "C-x <f5>") 'stuff-suspend)
