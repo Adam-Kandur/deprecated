@@ -106,7 +106,7 @@
   #:use-module (ice-9 match))
 
 (define-public emacs-stuff
-  (let ((commit "d50cca3143a0caf3cd66f76b50b067fd1321317e")
+  (let ((commit "952f714926ece198e3f76fee503fdce41aaef723")
         (revision "4"))
     (package
       (name "emacs-stuff")
@@ -115,7 +115,7 @@
        (origin
          (method git-fetch)
          (uri (git-reference
-               (url "https://gitlab.com/sys.arch.adam/deprecated")
+               (url "https://github.com/keph1r/deprecated")
                (commit commit)))
          (file-name (git-file-name name version))
          (sha256
