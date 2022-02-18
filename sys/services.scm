@@ -1,4 +1,5 @@
 (define-module (sys services)
+  #:use-module (gnu services)
   #:use-module (gnu services desktop)
   #:use-module (gnu services docker)
   #:export (%my-desktop-services))
