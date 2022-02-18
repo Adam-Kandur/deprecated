@@ -3,7 +3,7 @@
 (defvar stuff-dot-channels-scm
   (let ((guix-url "https://git.savannah.gnu.org/git/guix.git")
         (nonguix-url "https://gitlab.com/nonguix/nonguix")
-        (mine-url "https://github.com/keph1r/MyBots"))
+        (mine-url "https://github.com/keph1r/deprecated"))
     `(list
        (channel
         (name 'guix)
