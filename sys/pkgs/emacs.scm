@@ -1,11 +1,7 @@
 (define-module (sys pkgs emacs)
   #:use-module ((guix licenses) #:prefix license:)
   #:use-module (guix packages)
-  #:use-module (guix cvs-download)
-  #:use-module (guix download)
-  #:use-module (guix bzr-download)
   #:use-module (guix git-download)
-  #:use-module (guix hg-download)
   #:use-module (guix build-system gnu)
   #:use-module (guix build-system cmake)
   #:use-module (guix build-system copy)
@@ -119,7 +115,7 @@
                (commit commit)))
          (file-name (git-file-name name version))
          (sha256
-          (base32 "0hqy03i4x01ar2gh29fdwqiv383l9gll4h1k9f8s81cn9n5ywdwf"))))
+          (base32 "0ydc4gxlj6whlndjnknfm8f7hxc56xyxdcmajnx42nid5380y77b"))))
       (build-system emacs-build-system)
       (arguments
        `(#:include '("\\.el$")
