@@ -29,36 +29,6 @@
   #:use-module (gnu packages tls)
   #:use-module (gnu packages xml))
 
-(define-public tic-80
-  (package
-    (name "tic-80")
-    (version "0.90.1723")
-    (source (origin
-              (method git-fetch)
-              (uri (git-reference
-                    (url "https://github.com/nesbox/TIC-80")
-                    (commit (string-append "v" version))
-                    (recursive? #t)))
-              (file-name (git-file-name name version))
-              (sha256
-               (base32
-                "1kmk5a76fs9krqkv4cc7wv6vlg0zlszz0yf2dlymwzmyn5hb758y"))))
-    (build-system cmake-build-system)
-    (arguments
-     `(;; #:modules ((guix build python-build-system)
-       ;;            (guix build utils)
-       ;;            (ice-9 ftw))
-       #:phases
-       (modify-phases %standard-phases
-         (add-after 'unpack setenv
-           (lambda* (#:key inputs outputs tests? #:allow-other-keys)
-             (setenv "HOME" "/tmp"))))))
-    (synopsis "")
-    (description
-     "")
-    (home-page "")
-    (license #f)))
-
 (define-public diff2dates
   (let ((home-page "https://github.com/AdamKaScripter/deprecated")
         (commit "40c5f202535ada3bea2bd06bbecfb32f98be5bdc")

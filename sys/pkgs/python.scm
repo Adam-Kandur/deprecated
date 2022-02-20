@@ -103,15 +103,15 @@
   #:use-module (srfi srfi-1)
   #:use-module (srfi srfi-26))
 
-(define-public python-discord.py
+(define-public python-pycord
   (package
-    (name "python-discord.py")
+    (name "python-pycord")
     (version "1.7.3")
     (source
      (origin
        (method git-fetch)
        (uri (git-reference
-             (url "https://github.com/Rapptz/discord.py")
+             (url "https://github.com/Pycord-Development/pycord")
              (commit (string-append "v" version))))
        (file-name (git-file-name name version))
        (sha256
@@ -122,6 +122,7 @@
     (home-page "https://discordpy.readthedocs.io/en/stable")
     (synopsis "An API wrapper for Discord written in Python")
     (description
-     "Modern, easy to use, feature-rich, and async ready API wrapper for Discord.")
+     "A fork of discord.py.  Pycord is a modern, easy to use, feature-rich, and
+async ready API wrapper for Discord written in Python.")
     (license license:expat)))
 
