@@ -16,7 +16,7 @@
         (url ,mine-url)
 	(branch "main")))))
 
-(defun stuff-init ()
+(defun stuff ()
   (interactive)
   (stuff-emacs-options-to-apply)
   (stuff-unix-misc)
@@ -59,7 +59,7 @@
 
 (defun stuff-generate-dot-emacs ()
   (stuff-write-to-file "~/.emacs"
-                       "(require 'stuff)\n(stuff-init)\n"))
+                       "(require 'stuff)\n(stuff)\n"))
 
 (defun stuff-generate-dot-channels-scm ()
   (stuff-write-to-file "~/.channels.scm"
@@ -76,4 +76,4 @@
   (interactive)
   (shell-command "loginctl suspend && xlock"))
 
-(global-set-key (kbd "C-x <f5>") 'stuff-suspend)
+;; (global-set-key (kbd "C-x <f5>") 'stuff-suspend)
